@@ -32,9 +32,9 @@ function resizeIFrameToFitContent( iFrame,divs ) {
     iFrame.height = divs.scrollHeight;
 }
 
-window.addEventListener('DOMContentReady', function(e) {
-
+window.addEventListener('DOMContentLoaded', function(e) {
     var iFrame = document.getElementsByClassName( 'render-viewer' );
+    setTimeout(function(){ console.log('Oh'); }, 3000);
     var divs = document.getElementById('notebook');
     resizeIFrameToFitContent( iFrame[0],divs );
 
