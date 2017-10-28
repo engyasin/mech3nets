@@ -26,16 +26,17 @@ iframe.render-viewer{
 </style>
 <script type="application/javascript">
 
-function resizeIFrameToFitContent( iFrame ) {
+function resizeIFrameToFitContent( iFrame,divs ) {
 
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    iFrame.width  = divs.scrollWidth;
+    iFrame.height = divs.scrollHeight;
 }
 
 window.addEventListener('DOMContentLoaded', function(e) {
 
     var iFrame = document.getElementsByClassName( 'render-viewer' );
-    resizeIFrameToFitContent( iFrame[0] );
+    var divs = document.getElementById('notebook');
+    resizeIFrameToFitContent( iFrame[0],divs );
 
     // or, to resize all iframes:
 } );
