@@ -35,13 +35,9 @@ function resizeIFrameToFitContent( iFrame ) {
 window.addEventListener('DOMContentLoaded', function(e) {
 
     var iFrame = document.getElementsByClassName( 'render-viewer' );
-    resizeIFrameToFitContent( iFrame );
+    resizeIFrameToFitContent( iFrame[0] );
 
     // or, to resize all iframes:
-    var iframes = document.querySelectorAll("iframe");
-    for( var i = 0; i < iframes.length; i++) {
-        resizeIFrameToFitContent( iframes[i] );
-    }
 } );
 
 </script>
