@@ -20,26 +20,11 @@ text-align: center;
 .gist-meta a:hover{color:#0e4071 !important}
 iframe.render-viewer{
            /*width: 250px; /*or any other size*/
-           /*height: 300px; /*or any other size*/
+           height: 5000px; /*or any other size*/
            overflow: hidden;
  }
 </style>
 <script type="application/javascript">
-
-function resizeIFrameToFitContent( iFrame,divs ) {
-
-    iFrame.width  = divs.scrollWidth;
-    iFrame.height = divs.scrollHeight;
-}
-
-window.addEventListener('DOMContentLoaded', function(e) {
-    var iFrame = document.getElementsByClassName( 'render-viewer' );
-    setTimeout(function(){ console.log('Oh'); }, 3000);
-    var divs = document.getElementById('notebook');
-    resizeIFrameToFitContent( iFrame[0],divs );
-
-    // or, to resize all iframes:
-} );
 
 </script>
 </head>
